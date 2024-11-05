@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Preetha's Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: black;
+      font-family: "Open Sans", sans-serif;
+      color: white;
+    }
+
+    .MenuFlex {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+      font-size: 20px;
+
+    }
+
+    .Menu {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: black;
+    }
+
+    .menu-link {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .sstitle {
+      display: none;
+    }
+
+    .button1 button {
+      padding: 15px;
+      background-color: #FFD700;
+      color: black;
+      font-size: 16px;
+      border-radius: 7px;
+    }
+
+    .button1 a,
+    .button2 a {
+      padding: 15px;
+      background-color: #FFD700;
+      color: black;
+      font-size: 16px;
+      border-radius: 7px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .button1 a:hover,
+    .button2 a:hover {
+      background-color: blue;
+      cursor: pointer;
+      color: white;
+    }
+
+
+    .Name {
+      height: 110vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .About1 {
+      margin-left: 40px;
+      margin-bottom: 80px;
+      color: lightgray;
+      width: 70vw;
+      font-size: 20px;
+    }
+
+    .Education {
+      margin-left: 40px;
+      width: 40vw;
+      font-size: 20px;
+    }
+
+    .EducationFlex {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      margin-bottom: 50px;
+    }
+
+    .college,
+    .school {
+      font-size: 20px;
+      margin-right: 30px;
+    }
+
+    .Expertise {
+      height: 200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 20px;
+      margin-bottom: 250px;
+    }
+
+    .Expertise1 {
+      margin-left: 40px;
+      margin-right: 250px;
+    }
+
+    .FullStack {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .Programming,
+    .DataStructures,
+    .FullStack {
+      margin-right: 20px;
+    }
+
+    .ProjectTitle {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .ProjectList {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Senti,
+    .Obj,
+    .Pack {
+      font-size: 20px;
+      height: 300px;
+      width: 400px;
+      margin: 30px;
+      border: 3px solid white;
+      background-color: #9a8512;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 100px;
+    }
+
+    .Achievements {
+      margin-left: 40px;
+      font-size: 20px;
+      margin-bottom: 100px;
+    }
+
+    .Contact {
+      font-size: 20px;
+      margin-left: 40px;
+    }
+
+    .Contact {
+      margin-bottom: 100px;
+    }
+
+    .email {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .linkedin,
+    .github,
+    .leetcode {
+      margin-right: 20px;
+    }
+
+    .centerline {
+      width: 5%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 950px) {
+      .sstitle {
+        display: block;
+        font-size: 40px;
+        text-align: center;
+        margin-top: 20px;
+        color: white;
+      }
+
+      .MenuFlex {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        justify-items: center;
+        align-items: center;
+
+      }
+
+      .menu-link {
+        font-size: 25px;
+      }
+
+      .Menu {
+        position: static;
+      }
+
+      .EducationFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 50px;
+      }
+
+      .Expertise {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 450px;
+      }
+
+      .ProjectTitle {
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .ProjectList {
+        display: flex;
+        flex-direction: column;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="Menu">
+      <h1 class="sstitle">Preetha's Portfolio</h1>
+      <div class="MenuFlex">
+
+        <a href="#home" class="menu-link">Home</a>
+        <a href="#about" class="menu-link">About</a>
+        <a href="#expertise" class="menu-link">Expertise</a>
+        <a href="#projects" class="menu-link">Projects</a>
+        <a href="#achievements" class="menu-link">Achievements</a>
+        <a href="#contact" class="menu-link">Contact</a>
+
+        <div class="button1">
+          <a href="Resume.pdf" target="_blank">View Resume</a>
+        </div>
+
+        <div class="button2">
+          <a href="Resume.pdf" download>Download Resume</a>
+        </div>
+
+      </div>
+      <hr>
+    </div>
+  </nav>
+
+
+
+
+  <div id="home" class="Name">
+    <h1 style="font-size: 100px; margin: 0;">Hey,I'm Preetha P<span style="color: #FFD700;">!</span></h1>
+    <p style="font-size: 45px; color: lightgray;">Aspiring MERN Stack Developer, Coder...</p>
+  </div>
+
+  <div id="about" class="About">
+    <div class="About1">
+      <h1>About</h1>
+      <p>Enthusiastic programmer with a keen interest in exploring diverse technologies and constantly enhancing my
+        skill set across various domains.</p>
+      <p>Driven by curiosity and a commitment to growth, I am open to innovative projects and collaborative
+        opportunities that challenge me to learn and excel in new technologies.</p>
+    </div>
+
+    <div class="EducationFlex">
+      <div class="Education">
+        <h1 style="color: white;">Education</h1>
+      </div>
+
+      <div class="college">
+        <h3 style="color: white;">B.Tech, Artificial Intelligence and Data Science</h3>
+        <hr style="border: 1px solid #FFD700;">
+        <p>October 2022 - June 2026</p>
+        <p>Bannari Amman Institute of Technology, Sathyamangalam.</p>
+        <p>CGPA: 8.34</p>
+      </div>
+
+      <div class="school">
+        <h3 style="color: white;">CLASS XII, State Board</h3>
+        <hr style="border: 1px solid #FFD700; margin-top: 55px;">
+        <p>March 2022</p>
+        <p>Jai Saradha Matric Higher Secondary School, Tiruppur.</p>
+        <p>Percentage: 93.33</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="expertise" class="Expertise">
+    <div class="Expertise1">
+      <h1>Expertise</h1>
+    </div>
+    <div class="Programming">
+      <h3>Programming Languages</h3>
+      <hr style="border: 1px solid #FFD700;">
+      <ul style="color: lightgray;">
+        <li>C</li>
+        <li>C++</li>
+      </ul>
+    </div>
+    <div class="DataStructures">
+      <h3>Data Structures and Algorithm</h3>
+      <hr style="border: 1px solid #FFD700;">
+      <ul style="color: lightgray;">
+        <li>Basic understanding of data structures and algorithms</li>
+      </ul>
+    </div>
+    <div class="FullStack">
+      <h3>Full Stack Development</h3>
+      <hr style="border: 1px solid #FFD700;">
+      <ul style="color: lightgray;">
+        <li>MERN Stack</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="projects" class="Projects">
+    <div class="ProjectTitle">
+      <h1>My Projects</h1>
+    </div>
+
+    <div class="ProjectList">
+
+      <div class="Senti">
+        <h3>Sentiment Analysis on Twitter</h3>
+        <p>Analyzed Twitter data using NLP to gauge public sentiment on various topics, gaining experience in working
+          with large datasets.</p>
+      </div>
+      <div class="Obj">
+        <h3>Real-Time Object Detection (YOLOv3)</h3>
+        <p> Created an app for real-time object detection and classification, enhancing skills in computer vision and
+          data processing.</p>
+      </div>
+      <div class="Pack">
+        <h3>Pack Perfect</h3>
+        <p>Developed a travel app that customizes packing checklists based on trip type, focusing on user-centered
+          design and usability.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="achievements" class="Achievements">
+    <div class="AchievementsTitle">
+      <h1>Achievements</h1>
+    </div>
+    <div>
+      <ul style="color: lightgray;">
+        <li>
+          <p style="font-weight: bold;">First Place in Paper Presentation</p>
+        </li>
+        <p>Topic: New Frontiers in Emerging Solar Cells</p>
+        <p>Event: Shree Sai Ram Engineering College, Chennai</p>
+        <p>Recognized for innovative research and presentation on advancements in solar cell technology.</p>
+
+      </ul>
+    </div>
+  </div>
+
+  <div id="contact" class="Contact">
+    <h1>Get In Touch</h1>
+    <ol>
+      <div class="email">
+        <img src="email.png" alt="email" style="height: 25px; margin-right: 10px">
+        <span>preetha.ad22@bitsathy.ac.in</span>
+      </div>
+
+      <div class="location">
+        <img src="—Pngtree—yellow pointer location icon_6188671.png" alt="location"
+          style="height: 40px;width: 40px; margin-right: 10px">
+        <span>India</span>
+      </div>
+    </ol>
+  </div>
+
+  <div class="logos">
+    <div class="linkedin">
+      <a href="https://www.linkedin.com/in/preetha-p-801906285/" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+      </a>
+    </div>
+    <div class="github">
+      <a href="https://github.com/Preetha0811" target="_blank">
+        <img src="github.png" alt="github" style="width: 40px; height: 40px;">
+      </a>
+    </div>
+    <div class="leetcode">
+      <a href="https://leetcode.com/u/preetha0408/" target="_blank">
+        <img src="leetcode.png" alt="leetcode" style="width: 40px; height: 40px;">
+      </a>
+    </div>
+  </div>
+
+  <hr class="centerline" style="margin-bottom: 40px;">
+
+
+</body>
+
+</html>
